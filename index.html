@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schedular Application</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <script>
+		function checkforblank() {
+			if (document.getElementById('Ename').value == "") {
+				alert('Please Enter an Event');
+				document.getElementById('Ename').style.borderColor = "red";
+				return false;
+				
+			}
+			if (document.getElementById('Lname').value == "") {
+				alert('Please Enter a lOCATION');
+				document.getElementById('Lname').style.borderColor = "red";
+				return false;
+				
+			}
+			if (document.getElementById('start_date').value == "") {
+				alert('Please Enter a Stat Date');
+				document.getElementById('start_date').style.borderColor = "red";
+				return false;
+				
+			}
+			if (document.getElementById('start_date').value == "") {
+				alert('Please Enter a time');
+				document.getElementById('start_time').style.borderColor = "red";
+				return false;
+				
+			}
+			if (document.getElementById('end_date').value == "") {
+				alert('Please Enter an End Date');
+				document.getElementById('end_date').style.borderColor = "red";
+				return false;
+				
+			}
+			if (document.getElementById('end_date').value == "") {
+				alert('Please Enter an lOCATION');
+				document.getElementById('end_date').style.borderColor = "red";
+				return false;
+				
+			}
+			if (document.getElementById('desc').value == "") {
+				alert('Please Enter Event Description');
+				document.getElementById('desc').style.borderColor = "red";
+				return false;
+				
+			}
+		}
+	</script>
+  </head>
+  <body>
+<div class="container-fluid">
+  <div class="row">
+    <header>
+      <p><span class="glyphicon glyphicon-calendar">SCHEDULER APPLICATION</span></p>
+    </header>
+  </div>
+  <div class="row" id="section">
+    <div class="col-md-12">
+      <div role="tabpanel">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active"><a href="#home1" data-toggle="tab" role="tab" id="tab1">Home</a></li>
+          <li><a href="#paneTwo1" data-toggle="tab" role="tab">Up coming Events</a></li>
+           <li><a href="#paneTwo1" data-toggle="tab" role="tab"> Event History</a></li>
+        </ul>
+        <div id="tabContent1" class="tab-content">
+          <div class="tab-pane fade in active" id="home1">
+            <form method="post" action="#" onSubmit="return checkforblank()">
+            <legend>Event Details</legend>
+            <fieldset>
+                <input type="text" id="Ename" name="Ename" placeholder="Event Name">
+                
+                <input type="text" id="Lname" name="Lname" placeholder="Location">
+                <br>
+               
+                <label> Start At:</label>
+                <input type="date" id="start_date">
+                <input type="time" id="start_time">
+                <br>
+                
+                <label> End At:</label>
+                <input type="date" id="end_date">
+                <input type="time" id="end_time">
+                <br>
+                
+                <label> All day:</label>
+                	<input type="checkbox" id="Cbox">
+                <br>
+                <textarea placeholder="Enter Description" id="desc"></textarea><br>
+                
+                <input type="submit" value="Save" id="Save">
+                
+            </fieldset>
+            </form>
+         
+          </div>
+          <div class="tab-pane fade" id="paneTwo1">
+            <p>Content 2</p>
+          </div>
+          <div class="tab-pane fade" id="tabDropDownOne1">
+            <p>Dropdown content#1</p>
+          </div>
+          <div class="tab-pane fade" id="tabDropDownTwo1">
+            <p>Dropdown content#2 </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-1.11.2.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed --> <script src="js/bootstrap.js"></script>
+  </body>
+</html>
